@@ -4,10 +4,47 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="public/style.css">
     <title>Vite App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <div id="app">
+          <div>            
+              <img src="public/vite.svg" class="logo" alt="Vite logo" />
+              <img src="public/javascript.svg" class="logo vanilla" alt="JavaScript logo" />
+            <h1>Dynamic Import</h1>
+            <div class="card">
+              <button id="counter" type="button"> Watch me </button>
+            </div>
+            <p class="read-the-docs">
+              <a href="https://github.com/PeterNaydenov/dynamic-import#dynamic-import-peternaydenovdynamic-import" target="_blank">
+                See the documentation
+              </a>
+            </p>
+          </div>
+    </div>
+    <script type="module">
+        // Load this library:
+        import dynamicImport from './src/main.js'
+        
+        // Create a import pattern function:
+        const 
+            patternFn = name => import(`./test/${name}-lib.js`)
+          , load = dynamicImport(patternFn)
+          ;
+        
+        
+        // Provide a list of libraries to load. Always a list:
+        load ( [ 'test' ] )
+            .then ( ([test]) => { // Method 'load' returns a promise
+                    const 
+                        btn = document.getElementById ( 'counter' )
+                      , callme = test.callme // function callme is a dynamic imported function
+                      ;
+                    // Wait for a second and half to make change in the button visible
+                    setTimeout ( () =>  btn.innerHTML = callme(), 1500)
+                })
+
+    </script>
   </body>
 </html>
