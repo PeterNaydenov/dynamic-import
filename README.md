@@ -31,9 +31,6 @@ importModules ( importList )  // Expect string[] and returns a promise
             .then ( moduleList => {
                         // Do something with the moduleList
             })
-     .then ( moduleList => {
-                        // Do something with the moduleList
-            })
 ```
 
 
