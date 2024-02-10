@@ -1,7 +1,7 @@
 {
   "name": "@peter.naydenov/dynamic-import",
   "description": "Dynamic import function for ES modules that works with Vite bundler",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "license": "MIT",
   "author": {
     "name": "Peter Naydenov"
@@ -9,14 +9,14 @@
   "main": "./dist/dynamic-import.umd.js",
   "type": "module",
   "exports": {
-        ".": {
-              "import": "./dist/dynamic-import.esm.mjs",
-              "require": "./dist/dynamic-import.cjs",
-              "default": "./dist/dynamic-import.umd.js"
-            },
-            "./package.json": "./package.json",
-            "./dist/*": "./dist/*",
-            "./src/*": "./src/*"
+    ".": {
+      "import": "./dist/dynamic-import.esm.mjs",
+      "require": "./dist/dynamic-import.cjs",
+      "default": "./dist/dynamic-import.umd.js"
+    },
+    "./package.json": "./package.json",
+    "./dist/*": "./dist/*",
+    "./src/*": "./src/*"
   },
   "scripts": {
     "dev": "vite",
