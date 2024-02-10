@@ -1,22 +1,26 @@
 {
   "name": "@peter.naydenov/dynamic-import",
-  "version": "0.0.3",
   "description": "Dynamic import function for ES modules that works with Vite bundler",
+  "version": "0.0.3",
   "license": "MIT",
-  "keywords": [
-    "import",
-    "dynamic import",
-    "vite",
-    "ES Modules"
-  ],
-  "type": "module",
-  "main": "src/main.js",
   "author": {
     "name": "Peter Naydenov"
   },
+  "main": "./dist/dynamic-import.umd.js",
+  "type": "module",
+  "exports": {
+        ".": {
+              "import": "./dist/dynamic-import.esm.mjs",
+              "require": "./dist/dynamic-import.cjs",
+              "default": "./dist/dynamic-import.umd.js"
+            },
+            "./package.json": "./package.json",
+            "./dist/*": "./dist/*",
+            "./src/*": "./src/*"
+  },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "rollup -c",
     "test": "npx cypress open --component --browser chrome"
   },
   "repository": {
@@ -24,9 +28,18 @@
     "url": "https://github.com/PeterNaydenov/dynamic-import.git"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
     "@vitejs/plugin-vue": "^5.0.4",
     "cypress": "^13.6.4",
     "vite": "^5.1.1",
     "vue": "^3.4.18"
-  }
+  },
+  "keywords": [
+    "import",
+    "dynamic import",
+    "vite",
+    "ES Modules"
+  ]
 }

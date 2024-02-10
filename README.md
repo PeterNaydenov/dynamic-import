@@ -19,7 +19,13 @@ npm i @peter.naydenov/dynamic-import
 ## Usage
 
 ```js
+// for es6 projects:
 import dynamicImport from '@peter.naydenov/dynamic-import';
+
+// for commonjs projects:
+const dynamicImport = require('@peter.naydenov/dynamic-import');
+
+
 
 // Provide first the import pattern function like this one:
 const importPattern = (name) => import(`./modules/${name}.js`);
