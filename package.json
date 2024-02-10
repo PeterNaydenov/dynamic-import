@@ -24,9 +24,9 @@
     "url": "https://github.com/PeterNaydenov/dynamic-import.git"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^4.4.1",
-    "cypress": "^13.5.1",
-    "vite": "^5.0.10",
-    "vue": "^3.3.8"
+    "@vitejs/plugin-vue": "^5.0.4",
+    "cypress": "^13.6.4",
+    "vite": "^5.1.1",
+    "vue": "^3.4.18"
   }
 }
