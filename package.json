@@ -32,9 +32,9 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@vitejs/plugin-vue": "^5.0.4",
-    "cypress": "^13.6.4",
-    "vite": "^5.1.1",
-    "vue": "^3.4.18"
+    "cypress": "^13.6.6",
+    "vite": "^5.1.4",
+    "vue": "^3.4.21"
   },
   "keywords": [
     "import",
