@@ -34,7 +34,7 @@
     "@vitejs/plugin-vue": "^6.0.1",
     "cypress": "^14.5.3",
     "vite": "^7.0.5",
-    "vue": "^3.5.17"
+    "vue": "^3.5.18"
   },
   "keywords": [
     "import",
