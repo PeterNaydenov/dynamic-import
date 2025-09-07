@@ -1,9 +1,13 @@
 'use strict'
+
+const defaultLoadedFn = ( x ) => x ? x.default : null
+
 /**
- * @param {Function} importFn - 'import-pattern' function
+ * @param {Function} importFn - 'import-pattern' function. (required)
+ * @param {Function} loadedFn - function that executes when module is loaded (optional)
  * @returns {Function} requestList - function that expect list of modules
  */
-function dynamicImport ( importFn ) {
+function dynamicImport ( importFn, loadedFn=defaultLoadedFn ) {
 /**
  * Function that expect list of modules
  * @param {Array.<string|Object>} list - Data argument for 'import-pattern' function
@@ -13,7 +17,7 @@ return function requestList ( list ) {
         const promises = [];
         list.forEach ( src =>  promises.push ( 
                                             importFn ( src )
-                                                    .then ( x => x ? x.default : null )
+                                                    .then ( loadedFn )
                                                     .catch ( err => null )   
                                     ))
         return Promise.all ( promises )
