@@ -1,1 +1,1 @@
-function n(n){return function(t){const u=[];return t.forEach((t=>u.push(n(t).then((n=>n?n.default:null)).catch((n=>null))))),Promise.all(u)}}export{n as default};
+const n=n=>n?n.default:null;function t(t,u=n){return function(n){const l=[];return n.forEach((n=>l.push(t(n).then(u).catch((n=>null))))),Promise.all(l)}}export{t as default};

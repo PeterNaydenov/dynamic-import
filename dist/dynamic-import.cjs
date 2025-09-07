@@ -1,1 +1,1 @@
-"use strict";module.exports=function(t){return function(n){const u=[];return n.forEach((n=>u.push(t(n).then((t=>t?t.default:null)).catch((t=>null))))),Promise.all(u)}};
+"use strict";const t=t=>t?t.default:null;module.exports=function(n,u=t){return function(t){const c=[];return t.forEach((t=>c.push(n(t).then(u).catch((t=>null))))),Promise.all(c)}};
