@@ -1,7 +1,7 @@
 {
   "name": "@peter.naydenov/dynamic-import",
   "description": "Dynamic import function for ES modules that works with Vite bundler",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "author": {
     "name": "Peter Naydenov"
