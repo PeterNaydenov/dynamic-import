@@ -1,6 +1,6 @@
 'use strict'
 
-const defaultLoadedFn = ( x ) => x ? x.default : null
+const defaultLoadedFn = ( x ) => x.default ? x.default : x
 
 /**
  * @param {Function} importFn - 'import-pattern' function. (required)
