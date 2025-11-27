@@ -58,7 +58,7 @@ If you want to load a custom module name you can do it like this:
 
 const importModules = dynamicImport ( importPattern );
 // requesting just a name will load module.default, providing string with 'module:name' will load module[name]
-import ( [ 'test:other' ] )
+importModules ( [ 'test:other' ] )
       .then ( ls => {
                 const myModuleLoaded = ls[0];
                 // Do something with myModuleLoaded
