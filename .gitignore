@@ -11,6 +11,9 @@ node_modules
 cypress
 dist-ssr
 *.local
+.opencode
+.agent
+.shared
 
 # Editor directories and files
 .vscode/*
