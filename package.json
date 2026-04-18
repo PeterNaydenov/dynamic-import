@@ -7,9 +7,11 @@
     "name": "Peter Naydenov"
   },
   "main": "./src/main.js",
+  "types": "./dist/dynamic-import.d.ts",
   "type": "module",
   "exports": {
     ".": {
+      "types": "./dist/dynamic-import.d.ts",
       "import": "./dist/dynamic-import.esm.mjs",
       "require": "./dist/dynamic-import.cjs",
       "default": "./dist/dynamic-import.umd.js"
@@ -21,6 +23,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "types": "tsc",
     "test": "vitest",
     "cover": "vitest --coverage"
   },
@@ -30,6 +33,7 @@
   },
   "devDependencies": {
     "@vitest/coverage-v8": "^4.1.4",
+    "typescript": "^6.0.3",
     "vite": "^8.0.8",
     "vitest": "^4.1.4"
   },

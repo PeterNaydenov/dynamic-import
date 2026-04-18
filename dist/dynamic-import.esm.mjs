@@ -1,5 +1,5 @@
 //#region src/main.js
-var e = (e) => e.default ? e.default : e;
+var e = (e) => e.default ?? e;
 function t(t, n = e) {
 	return function(e) {
 		let r = [];
