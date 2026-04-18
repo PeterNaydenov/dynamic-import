@@ -1,6 +1,5 @@
+import { describe, it, expect } from 'vitest'
 import dynamicImport from '../src/main.js'
-
-
 
 
 
@@ -8,25 +7,22 @@ describe ( 'Dynamic Loading of JS files', () => {
 
 
 
-it ('general test', done => {
-      expect ( dynamicImport ).to.be.a ( 'function' )
+it ('general test', async () => {
+      expect ( typeof dynamicImport ).toBe ( 'function' )
       let importPatternFn = name => import ( `./${name}-lib.js` );
       let importEngine = dynamicImport ( importPatternFn );
 
-      expect ( importEngine ).to.be.a ( 'function' )
+      expect ( typeof importEngine ).toBe ( 'function' )
       
-      importEngine ( [ 'test'] )
-            .then ( ls => {
-                      const fn = ls[0].callme;
-                      expect ( fn ).to.be.a ( 'function' )
-                      expect ( fn() ).to.be.equal ( 'Hello!' )
-                      done ()
-                })
+      const ls = await importEngine ( [ 'test'] )
+      const fn = ls[0].callme;
+      expect ( typeof fn ).toBe ( 'function' )
+      expect ( fn() ).toBe ( 'Hello!' )
 }) // it general test
 
 
 
-it ( 'Load a custom module name', done => {
+it ( 'Load a custom module name', async () => {
       const importPatternFn = req => {
                                     let
                                           file
@@ -38,17 +34,12 @@ it ( 'Load a custom module name', done => {
                               } // importPatternFn func.
 
       let importEngine = dynamicImport ( importPatternFn );
-      importEngine ( [ 'test:other' ] )
-            .then ( ls  => {
-                      const fn = ls[0].callme;
-                      expect ( fn ).to.be.a ( 'function' )
-                      expect ( fn() ).to.be.equal ( 'Goodbye!' )
-                      done ()
-                  })
+      const ls = await importEngine ( [ 'test:other' ] )
+      const fn = ls[0].callme;
+      expect ( typeof fn ).toBe ( 'function' )
+      expect ( fn() ).toBe ( 'Goodbye!' )
 }) // it Load a custom module name
 
 
 
 }) // describe
-
-
