@@ -2,6 +2,15 @@
 
 
 
+### 1.1.0 (2026-04-18)
+- [x] Update jsdoc comments;
+- [x] Creation of d.ts file;
+- [x] Migrate testing from cypress to vitest;
+- [x] Build process with Vite v.8.x.x;
+- [x] Minimize the dev dependencies;
+
+
+
 ### 1.0.0 (2025-09-07)
 - [x] Refactoring: dynamicImport can receive a custom loaded function. Use it to execute code after module is loaded.(optional);
 
