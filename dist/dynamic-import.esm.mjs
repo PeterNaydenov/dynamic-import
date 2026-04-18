@@ -1,1 +1,10 @@
-const t=t=>t.default?t.default:t;function n(n,u=t){return function(t){const e=[];return t.forEach((t=>e.push(n(t).then(u).catch((t=>null))))),Promise.all(e)}}export{n as default};
+//#region src/main.js
+var e = (e) => e.default ? e.default : e;
+function t(t, n = e) {
+	return function(e) {
+		let r = [];
+		return e.forEach((e) => r.push(t(e).then(n).catch((e) => null))), Promise.all(r);
+	};
+}
+//#endregion
+export { t as default };
