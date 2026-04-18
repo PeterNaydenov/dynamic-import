@@ -6,7 +6,7 @@
   "author": {
     "name": "Peter Naydenov"
   },
-  "main": "./dist/dynamic-import.umd.js",
+  "main": "./src/main.js",
   "type": "module",
   "exports": {
     ".": {
@@ -20,7 +20,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "rollup -c",
+    "build": "vite build",
     "test": "vitest"
   },
   "repository": {
