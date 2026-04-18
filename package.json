@@ -21,13 +21,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "test": "vitest"
+    "test": "vitest",
+    "cover": "vitest --coverage"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/PeterNaydenov/dynamic-import.git"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.4",
     "vite": "^8.0.8",
     "vitest": "^4.1.4"
   },
