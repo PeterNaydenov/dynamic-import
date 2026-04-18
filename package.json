@@ -22,7 +22,7 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && tsc",
     "types": "tsc",
     "test": "vitest",
     "cover": "vitest --coverage"
