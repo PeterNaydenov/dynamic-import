@@ -32,10 +32,10 @@
     "url": "https://github.com/PeterNaydenov/dynamic-import.git"
   },
   "devDependencies": {
-    "@vitest/coverage-v8": "^4.1.7",
+    "@vitest/coverage-v8": "^4.1.8",
     "typescript": "^6.0.3",
     "vite": "^8.0.14",
-    "vitest": "^4.1.7"
+    "vitest": "^4.1.8"
   },
   "keywords": [
     "import",
