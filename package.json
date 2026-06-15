@@ -42,5 +42,8 @@
     "dynamic import",
     "vite",
     "ES Modules"
-  ]
+  ],
+  "allowScripts": {
+    "fsevents@2.3.3": true
+  }
 }
