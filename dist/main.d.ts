@@ -1,4 +1,3 @@
-export default dynamicImport;
 /**
  * Creates a dynamic import engine for loading modules based on provided patterns.
  * @param {Function} importFn - A function that takes a module request (string or object) and returns a Promise that resolves to the imported module. (required)
@@ -11,3 +10,4 @@ export default dynamicImport;
  * // modules = [utilsModule, helpersModule]
  */
 declare function dynamicImport(importFn: Function, loadedFn?: Function): Function;
+export default dynamicImport;
