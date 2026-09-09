@@ -2,6 +2,12 @@
 
 
 
+### 1.2.0 (2026-09-19)
+- [x] Dev dependency update. Typescript v.7.0.0;
+- [x] Dev dependency update. Vitest v.5.0.0;
+
+
+
 ### 1.1.0 (2026-04-18)
 - [x] Update jsdoc comments;
 - [x] Creation of d.ts file;
